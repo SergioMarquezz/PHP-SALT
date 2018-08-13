@@ -1,2 +1,2 @@
 # PHP-SALT
-Sistema de Administración Logistica Terrestre-PHP-MySQL-Android
+Sistema de Administración Logistica Terrestre-PHP-MySQL
