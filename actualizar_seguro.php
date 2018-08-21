@@ -3,7 +3,7 @@
 
     $total = $_POST['pagar-monto'];
     $fecha_pago = $_POST['fecha-pago-modal'];
-    $vehiculo_id = $_POST['vehiculo-id'];
+    $seguro_id = $_POST['seguro-id'];
 
     $foto_recibo = $_FILES['foto-recibo']['name'];
 
@@ -11,7 +11,7 @@
     $extension_imagen_recibo = explode('.',$foto_recibo);
     $extension_recibo = end($extension_imagen_recibo);
 
-     $nombre_recibo ='vehiculo-'.$vehiculo_id.'-recibo-seguro'.".".$extension_recibo;
+    $nombre_recibo ='seguro-'.$seguro_id.'-fecha pago-'.$fecha_pago.".".$extension_recibo;
 
     //Declaración ruta a guardar
     $rutaRecibo = "../img/recibos-seguros/".$nombre_recibo;   
