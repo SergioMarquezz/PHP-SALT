@@ -1,14 +1,14 @@
 <?php
-
+session_start();
 require 'Conexion.php';
-
+    $id_usuario =  $_SESSION['id_usuario'];
     try{
 
-        $consulta="select * from usuarios;";
+       $consulta="CALL select_users(?)";
 
         $comando = $conexion->prepare($consulta);
 
-        $comando->execute();
+        $comando->execute(array($id_usuario));
 
         $row = $comando->fetchAll(PDO::FETCH_ASSOC);
 
