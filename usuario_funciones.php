@@ -25,7 +25,7 @@ if($opcion == 'editar'){
     }
 }else if($opcion == 'eliminar'){
     try{
-        $consulta = ("CALL delete_user(?);");
+        $consulta = ("CALL update_estado_usuario(?);");
         $resultado = $conexion->prepare($consulta);             
         $resultado->execute(array($id_usuario));
         $result['Resultado'] = 'Borrado';
